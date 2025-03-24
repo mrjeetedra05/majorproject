@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BiteBazar - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <?php include 'php/session.php'; ?>
+    
+    <!-- Header (Fixed Navigation Bar) -->
+    <header>
+        <div class="logo">BiteBazar</div>
+        <nav>
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="add_restaurant.html">Add Restaurant</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <?php if ($_SESSION['user_name']) { ?>
+                    <li><a href="signup.html">Signup</a></li>
+                <?php } else { ?>
+                    <li><a href="signup.html">Login</a></li>
+                <?php } ?>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content with Background Image -->
+    <div class="hero">
+        <div class="search-box">
+            <h1>Order Your Favorite Food</h1>
+            <input type="text" placeholder="Search for restaurants, cuisines...">
+            <button>Search</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 BiteBazar. All rights reserved.</p>
+        <p>Privacy Policy | Terms of Service | Contact Us</p>
+    </footer>
+</body>
+</html>
